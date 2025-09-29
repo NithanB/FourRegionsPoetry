@@ -11,6 +11,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.fourregionspoetry.GeminiApiService
+import androidx.activity.OnBackPressedCallback
 
 class LoadingActivity : AppCompatActivity() {
 
@@ -29,6 +30,13 @@ class LoadingActivity : AppCompatActivity() {
         // Get data from intent
         region = intent.getStringExtra("REGION") ?: "central"
         keywords = intent.getStringArrayListExtra("KEYWORDS") ?: arrayListOf()
+
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                // Disable back button during loading
+                // User must wait for completion or error
+            }
+        })
 
         initViews()
         setupAnimation()
@@ -124,8 +132,4 @@ class LoadingActivity : AppCompatActivity() {
         }, 2000)
     }
 
-    override fun onBackPressed() {
-        // Disable back button during loading
-        // User must wait for completion or error
-    }
 }
