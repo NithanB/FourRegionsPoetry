@@ -36,6 +36,7 @@ class MainActivity : AppCompatActivity() {
 class RegionSelectionActivity : AppCompatActivity() {
 
     private lateinit var btnBack: Button
+
     private lateinit var btnNorth: Button
     private lateinit var btnSouth: Button
     private lateinit var btnNortheast: Button
