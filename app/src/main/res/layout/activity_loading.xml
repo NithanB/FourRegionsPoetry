@@ -20,12 +20,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/logo_background"
-            android:src="@drawable/ic_temple"
-            android:contentDescription="Loading Logo" />
+            android:contentDescription="Loading Logo"
+            android:src="@raw/ic_temple" />
 
     </RelativeLayout>
 
-    <!-- Loading Text -->
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

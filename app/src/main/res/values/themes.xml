@@ -3,6 +3,7 @@
     <style name="Base.Theme.FourRegionsPoetry" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:fontFamily">@font/thai_font</item> <!-- Added this line -->
     </style>
 
     <style name="Theme.FourRegionsPoetry" parent="Base.Theme.FourRegionsPoetry" />

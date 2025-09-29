@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/tvKeyword"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_margin="4dp"
-    android:background="@drawable/chip_background" 
+    android:background="@drawable/chip_background"
+    android:orientation="horizontal"
+    android:gravity="center"
     android:paddingStart="12dp"
     android:paddingEnd="12dp"
-    android:paddingTop="8dp"
-    android:paddingBottom="8dp"
-    android:textColor="@android:color/white"
-    android:textSize="14sp" />
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp"
+    android:layout_margin="4dp">
+
+    <TextView
+        android:id="@+id/tvKeyword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Keyword"
+        android:textColor="@color/amber_800"
+        android:textSize="14sp" />
+
+</LinearLayout>

@@ -1,3 +1,73 @@
 <resources>
-    <string name="app_name">FourRegionsPoetry</string>
+    <!-- App name -->
+    <string name="app_name">Thai Poetry</string>
+    <string name="app_name_thai">ศิลปะและวัฒนธรรมไทย</string>
+
+    <!-- Start Screen -->
+    <string name="start_title">Thai Poetry</string>
+    <string name="start_subtitle">ศิลปะและวัฒนธรรมไทย</string>
+    <string name="start_description">Discover the beauty of Thai traditional poetry\nfrom all four regions of Thailand</string>
+    <string name="start_button">เริ่มต้น (Start)</string>
+
+    <!-- Region Selection -->
+    <string name="select_region">Select Region</string>
+    <string name="select_region_thai">เลือกภูมิภาค</string>
+    <string name="region_north">North</string>
+    <string name="region_north_thai">ภาคเหนือ</string>
+    <string name="region_south">South</string>
+    <string name="region_south_thai">ภาคใต้</string>
+    <string name="region_northeast">Northeast</string>
+    <string name="region_northeast_thai">อีสาน</string>
+    <string name="region_central">Central</string>
+    <string name="region_central_thai">ภาคกลาง</string>
+
+    <!-- Region Input -->
+    <string name="add_keywords">Add Keywords (คำหลัก)</string>
+    <string name="maximum_keywords">Maximum 3 keywords</string>
+    <string name="enter_keyword">Enter a keyword...</string>
+    <string name="generate_poetry">✨ Generate Poetry (สร้างกลอน)</string>
+    <string name="preview_prompt">Preview Prompt:</string>
+
+    <!-- Loading Screen -->
+    <string name="creating_poem">Creating Your Poem</string>
+    <string name="creating_poem_thai">กำลังสร้างกลอนของคุณ...</string>
+    <string name="loading_dots_1">Creating Your Poem</string>
+    <string name="loading_dots_2">Creating Your Poem.</string>
+    <string name="loading_dots_3">Creating Your Poem..</string>
+    <string name="loading_dots_4">Creating Your Poem...</string>
+
+    <!-- Result Screen -->
+    <string name="your_thai_poem">Your Thai Poem</string>
+    <string name="keywords_used">Keywords Used:</string>
+    <string name="your_thai_poetry">✨ Your Thai Poetry ✨</string>
+    <string name="copy_button">📋 Copy</string>
+    <string name="save_button">❤️ Save</string>
+    <string name="back_to_start">🏠 Back to Start (กลับหน้าแรก)</string>
+    <string name="celebrating_culture">Celebrating Thai Art and Culture</string>
+
+    <!-- Toast Messages -->
+    <string name="poem_copied">Poem copied to clipboard!</string>
+    <string name="poem_saved">Poem saved to favorites!</string>
+    <string name="poem_already_favorite">Poem already in favorites!</string>
+    <string name="error_generating">Error generating poem</string>
+    <string name="error_thai">เกิดข้อผิดพลาด</string>
+
+    <!-- Content Descriptions -->
+    <string name="logo_description">Thai Poetry Logo</string>
+    <string name="loading_logo_description">Loading Logo</string>
+    <string name="back_button_description">Back</string>
+    <string name="home_button_description">Home</string>
+    <string name="remove_keyword_description">Remove keyword</string>
+
+    <!-- Region Titles -->
+    <string name="northern_thailand">Northern Thailand</string>
+    <string name="southern_thailand">Southern Thailand</string>
+    <string name="isan_region">Isan</string>
+    <string name="central_thailand">Central Thailand</string>
+
+    <!-- Prompt Templates -->
+    <string name="north_prompt_template">create a short rhyming thai poem with %1$s and %2$s</string>
+    <string name="south_prompt_template">create a thai poem with %1$s and %2$s</string>
+    <string name="northeast_prompt_template">create a thai poem with %1$s and %2$s</string>
+    <string name="central_prompt_template">create a thai poem with %1$s and %2$s</string>
 </resources>
