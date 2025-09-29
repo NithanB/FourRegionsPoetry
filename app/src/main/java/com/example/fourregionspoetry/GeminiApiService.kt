@@ -1,5 +1,4 @@
-// REFERENCE ONLY - This Kotlin code won't work in this web environment
-// This would be used in Android Studio for Gemini AI integration
+
 
 package com.example.fourregionspoetry // Changed package name
 

@@ -1,8 +1,20 @@
+
+
 package com.example.thaipoetry
 
+import android.content.Context
+import android.R
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
+import android.view.inputmethod.EditorInfo
+import androidx.cardview.widget.CardView
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.thaipoetry.databinding.KeywordsAdapter
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
