@@ -1,9 +1,5 @@
 package com.example.fourregionspoetry
 
-// REFERENCE ONLY - This Kotlin code won't work in this web environment
-// This would be used in Android Studio
-
-
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageButton

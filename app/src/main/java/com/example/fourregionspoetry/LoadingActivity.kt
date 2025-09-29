@@ -10,7 +10,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import com.example.thaipoetry.api.GeminiRepository
+import com.example.fourregionspoetry.GeminiApiService
 
 class LoadingActivity : AppCompatActivity() {
 

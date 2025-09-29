@@ -1,6 +1,5 @@
-
-
 package com.example.fourregionspoetry
+
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -15,7 +14,6 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.edit // Added for SharedPreferences KTX
 import java.util.ArrayList // Added this import
-
 
 class MainActivity : AppCompatActivity() {
 

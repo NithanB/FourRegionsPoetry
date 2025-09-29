@@ -1,15 +1,14 @@
 package com.example.fourregionspoetry
 
-// REFERENCE ONLY - This Kotlin code won't work in this web environment
-// This would be used in Android Studio
-
-
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import android.widget.*
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -50,6 +49,12 @@ class RegionInputActivity : AppCompatActivity() {
         setupListeners()
         updateUI()
         loadSavedKeywords()
+
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                finish()
+            }
+        })
     }
 
     private fun initViews() {
@@ -139,7 +144,7 @@ class RegionInputActivity : AppCompatActivity() {
             val regionTitle = regionData[region]?.first?.lowercase() ?: region
             val shortRhyming = if (region == "north") "short rhyming " else ""
             val preview = "create a ${shortRhyming}thai poem with $regionTitle and ${keywords.joinToString(", ")}"
-            tvPreview.text = "\"$preview\""
+            tvPreview.text = "something"
             cardPreview.visibility = View.VISIBLE
         } else {
             cardPreview.visibility = View.GONE
@@ -168,11 +173,6 @@ class RegionInputActivity : AppCompatActivity() {
         keywordsAdapter.notifyDataSetChanged()
         updateGenerateButton()
         updatePreview()
-    }
-
-    override fun onBackPressed() {
-        super.onBackPressed()
-        finish()
     }
 }
 

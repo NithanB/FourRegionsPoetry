@@ -1,5 +1,3 @@
-
-
 package com.example.fourregionspoetry // Changed package name
 
 import androidx.lifecycle.MutableLiveData
