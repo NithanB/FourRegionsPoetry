@@ -41,7 +41,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="เลือกภูมิภาค"
-        android:textSize="18sp"
+        android:textSize="50sp"
         android:textColor="@color/amber_700"
         android:layout_gravity="center"
         android:layout_marginBottom="32dp" />
@@ -65,7 +65,8 @@
             android:text="🏔️\nNorth\nภาคเหนือ"
             android:textColor="@android:color/white"
             android:gravity="center"
-            android:elevation="8dp" />
+            android:elevation="8dp"
+            app:backgroundTint = "@drawable/region_button_north"/>
 
         <!-- South Region -->
         <Button
@@ -78,7 +79,8 @@
             android:text="🏝️\nSouth\nภาคใต้"
             android:textColor="@android:color/white"
             android:gravity="center"
-            android:elevation="8dp" />
+            android:elevation="8dp"
+            app:backgroundTint = "@drawable/region_button_south"/>
 
         <!-- Northeast Region -->
         <Button
@@ -91,7 +93,8 @@
             android:text="🌾\nNortheast\nอีสาน"
             android:textColor="@android:color/white"
             android:gravity="center"
-            android:elevation="8dp" />
+            android:elevation="8dp"
+            app:backgroundTint="@drawable/region_button_northeast"/>
 
         <!-- Central Region -->
         <Button
@@ -104,7 +107,8 @@
             android:text="🏛️\nCentral\nภาคกลาง"
             android:textColor="@android:color/white"
             android:gravity="center"
-            android:elevation="8dp" />
+            android:elevation="8dp"
+            app:backgroundTint = "@drawable/region_button_central"/>
 
     </GridLayout>
 

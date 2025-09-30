@@ -93,8 +93,8 @@
                     android:textColor="@color/amber_800"
                     android:layout_marginBottom="8dp" />
 
-                <com.google.android.flexbox.FlexBoxLayout
-                    android:id="@+id/flexboxKeywords"
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroupKeywords"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:flexWrap="wrap"
@@ -194,7 +194,8 @@
             android:background="@drawable/gradient_button"
             android:textColor="@android:color/white"
             android:elevation="8dp"
-            android:layout_marginBottom="32dp" />
+            android:layout_marginBottom="32dp"
+            app:backgroundTint ="@drawable/gradient_button"/>
 
         <!-- Footer -->
         <LinearLayout

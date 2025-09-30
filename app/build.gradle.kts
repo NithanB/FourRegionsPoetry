@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.fourregionspoetry"
-        minSdk = 35
+        minSdk = 31
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"
@@ -58,6 +58,7 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.1")
     implementation("androidx.cardview:cardview:1.0.0")
+    implementation(libs.google.flexbox)
 
 
     testImplementation(libs.junit)

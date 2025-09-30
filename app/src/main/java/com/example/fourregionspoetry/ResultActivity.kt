@@ -1,6 +1,3 @@
-// REFERENCE ONLY - This Kotlin code won't work in this web environment
-// This would be used in Android Studio
-
 package com.example.fourregionspoetry
 
 import android.content.ClipData
@@ -12,10 +9,11 @@ import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.android.flexbox.FlexboxLayout
+import androidx.core.content.edit
+import com.google.android.material.chip.Chip
+import com.google.android.material.chip.ChipGroup
 import org.json.JSONArray
 import org.json.JSONObject
 import java.text.SimpleDateFormat
@@ -31,7 +29,7 @@ class ResultActivity : AppCompatActivity() {
     private lateinit var tvRegionTitle: TextView
     private lateinit var tvRegionThai: TextView
     private lateinit var tvEmoji: TextView
-    private lateinit var flexboxKeywords: FlexboxLayout
+    private lateinit var chipGroupKeywords: ChipGroup // Changed from FlexboxLayout
 
     private lateinit var poem: String
     private lateinit var region: String
@@ -57,6 +55,12 @@ class ResultActivity : AppCompatActivity() {
         setupListeners()
         updateUI()
         savePoemToHistory()
+
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                navigateToStart()
+            }
+        })
     }
 
     private fun initViews() {
@@ -68,7 +72,7 @@ class ResultActivity : AppCompatActivity() {
         tvRegionTitle = findViewById(R.id.tvRegionTitle)
         tvRegionThai = findViewById(R.id.tvRegionThai)
         tvEmoji = findViewById(R.id.tvEmoji)
-        flexboxKeywords = findViewById(R.id.flexboxKeywords)
+        chipGroupKeywords = findViewById(R.id.chipGroupKeywords) // Ensure this ID matches your XML
     }
 
     private fun setupListeners() {
@@ -102,12 +106,14 @@ class ResultActivity : AppCompatActivity() {
         }
 
         // Add keyword chips
-        flexboxKeywords.removeAllViews()
+        chipGroupKeywords.removeAllViews()
         keywords.forEach { keyword ->
-            val chip = layoutInflater.inflate(R.layout.chip_keyword, flexboxKeywords, false)
-            val tvKeyword = chip.findViewById<TextView>(R.id.tvKeyword)
-            tvKeyword.text = keyword
-            flexboxKeywords.addView(chip)
+            val chip = Chip(this)
+            chip.text = keyword
+            // You can customize the chip appearance here if needed, e.g.:
+            // chip.setChipBackgroundColorResource(R.color.colorPrimary)
+            // chip.setTextColor(ContextCompat.getColor(this, R.color.white))
+            chipGroupKeywords.addView(chip)
         }
     }
 
@@ -144,9 +150,8 @@ class ResultActivity : AppCompatActivity() {
 
         favoritesArray.put(newFavorite)
 
-        with(sharedPref.edit()) {
+        sharedPref.edit {
             putString("favorite_poems", favoritesArray.toString())
-            apply()
         }
 
         Toast.makeText(this, "Poem saved to favorites!", Toast.LENGTH_SHORT).show()
@@ -176,9 +181,8 @@ class ResultActivity : AppCompatActivity() {
             newHistoryArray.put(historyArray.getJSONObject(i))
         }
 
-        with(sharedPref.edit()) {
+        sharedPref.edit {
             putString("saved_poems", newHistoryArray.toString())
-            apply()
         }
     }
 
@@ -188,9 +192,5 @@ class ResultActivity : AppCompatActivity() {
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
         startActivity(intent)
         finish()
-    }
-
-    override fun onBackPressed() {
-        navigateToStart()
     }
 }

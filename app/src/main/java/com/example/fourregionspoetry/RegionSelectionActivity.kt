@@ -1,14 +1,11 @@
 package com.example.fourregionspoetry
 
-// REFERENCE ONLY - This Kotlin code won't work in this web environment
-// This would be used in Android Studio
-
-
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageButton
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import androidx.activity.OnBackPressedCallback
 
 class RegionSelectionActivity : AppCompatActivity() {
 
@@ -21,6 +18,12 @@ class RegionSelectionActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_region_selection)
+
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                finish()
+            }
+        })
 
         initViews()
         setupListeners()
@@ -62,8 +65,4 @@ class RegionSelectionActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    override fun onBackPressed() {
-        super.onBackPressed()
-        finish()
-    }
 }

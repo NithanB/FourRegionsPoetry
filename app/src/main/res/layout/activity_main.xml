@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/logo_background"
-            android:src="@drawable/ic_temple"
+            android:src="@raw/ic_temple"
             android:contentDescription="Thai Poetry Logo" />
 
     </RelativeLayout>
@@ -31,7 +31,7 @@
         android:text="Thai Poetry"
         android:textSize="32sp"
         android:textColor="@color/amber_800"
-        android:fontFamily="@font/thai_font"
+
         android:layout_marginBottom="8dp" />
 
     <TextView
@@ -56,10 +56,15 @@
         android:id="@+id/btnStart"
         android:layout_width="match_parent"
         android:layout_height="56dp"
+        android:background="@drawable/add_button_background"
+        android:elevation="8dp"
+
         android:text="เริ่มต้น (Start)"
         android:textColor="@android:color/white"
-        android:background="@drawable/gradient_button"
+
         android:textSize="16sp"
-        android:elevation="8dp" />
+        app:backgroundTint="@color/orange_500"
+        />
+
 
 </LinearLayout>

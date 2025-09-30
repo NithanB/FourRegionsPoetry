@@ -1,6 +1,4 @@
-
-
-package com.example.fourregionspoetry // Changed package name
+package com.example.fourregionspoetry
 
 import androidx.lifecycle.MutableLiveData
 import retrofit2.Response
@@ -11,7 +9,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import kotlinx.coroutines.delay // Added import for delay
+import kotlinx.coroutines.delay
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
