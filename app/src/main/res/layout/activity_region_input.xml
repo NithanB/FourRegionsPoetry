@@ -122,7 +122,8 @@
                     android:text="+"
                     android:background="@drawable/add_button_background"
                     android:textColor="@android:color/white"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    app:backgroundTint="@color/orange_500"/>
 
             </LinearLayout>
 
@@ -138,18 +139,20 @@
     </androidx.cardview.widget.CardView>
 
     <!-- Generate Button -->
+
+    <!-- Preview Card -->
     <Button
         android:id="@+id/btnGenerate"
         android:layout_width="match_parent"
         android:layout_height="56dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/gradient_button"
+        android:elevation="8dp"
         android:text="✨ Generate Poetry (สร้างกลอน)"
         android:textColor="@android:color/white"
-        android:background="@drawable/gradient_button"
-        android:textSize="16sp"
-        android:elevation="8dp"
-        android:layout_marginBottom="24dp" />
+        app:backgroundTint="@color/orange_500"
+        android:textSize="16sp" />
 
-    <!-- Preview Card -->
     <androidx.cardview.widget.CardView
         android:id="@+id/cardPreview"
         android:layout_width="match_parent"

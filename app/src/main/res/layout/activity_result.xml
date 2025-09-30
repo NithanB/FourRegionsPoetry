@@ -194,7 +194,8 @@
             android:background="@drawable/gradient_button"
             android:textColor="@android:color/white"
             android:elevation="8dp"
-            android:layout_marginBottom="32dp" />
+            android:layout_marginBottom="32dp"
+            app:backgroundTint ="@drawable/gradient_button"/>
 
         <!-- Footer -->
         <LinearLayout
