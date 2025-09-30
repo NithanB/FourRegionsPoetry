@@ -1,7 +1,8 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-
     id("com.google.gms.google-services")
 }
 
@@ -17,7 +18,19 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        // Load GEMINI_API_KEY from local.properties
+        val localProperties = Properties()
+        val localPropertiesFile = rootProject.file("local.properties")
+        if (localPropertiesFile.exists()) {
+            localPropertiesFile.inputStream().use { input ->
+                localProperties.load(input)
+            }
+        }
+        val geminiApiKey: String = localProperties.getProperty("GEMINI_API_KEY", "") // Provide a default value if not found
+        buildConfigField("String", "GEMINI_API_KEY", "\"$geminiApiKey\"")
     }
+
 
     buildTypes {
         release {
@@ -37,6 +50,7 @@ android {
     }
     buildFeatures {
         viewBinding = true
+        buildConfig = true
     }
     dependenciesInfo {
         includeInApk = true
@@ -52,13 +66,14 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.recyclerview)
-    implementation("androidx.recyclerview:recyclerview:1.3.0")
+    // You have a duplicate recyclerview dependency, you can remove one
+    // implementation("androidx.recyclerview:recyclerview:1.3.0")
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.1")
-    implementation("androidx.cardview:cardview:1.0.0")
+    implementation(libs.androidx.cardview) // Use the version catalog alias
     implementation(libs.google.flexbox)
 
     testImplementation(libs.junit)

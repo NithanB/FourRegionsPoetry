@@ -13,3 +13,7 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# Rules for shelved/patched changes
+*.patch
+/.idea/shelf/
