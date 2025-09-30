@@ -62,11 +62,13 @@
             android:layout_columnWeight="1"
             android:layout_margin="8dp"
             android:background="@drawable/region_button_north"
-            android:text="🏔️\nNorth\nภาคเหนือ"
+            app:backgroundTint="@null"
+            android:text="🏔️
+North
+ภาคเหนือ"
             android:textColor="@android:color/white"
             android:gravity="center"
-            android:elevation="8dp"
-            app:backgroundTint = "@drawable/region_button_north"/>
+            android:elevation="8dp" />
 
         <!-- South Region -->
         <Button
@@ -76,11 +78,13 @@
             android:layout_columnWeight="1"
             android:layout_margin="8dp"
             android:background="@drawable/region_button_south"
-            android:text="🏝️\nSouth\nภาคใต้"
+            app:backgroundTint="@null"
+            android:text="🏝️
+South
+ภาคใต้"
             android:textColor="@android:color/white"
             android:gravity="center"
-            android:elevation="8dp"
-            app:backgroundTint = "@drawable/region_button_south"/>
+            android:elevation="8dp" />
 
         <!-- Northeast Region -->
         <Button
@@ -90,11 +94,13 @@
             android:layout_columnWeight="1"
             android:layout_margin="8dp"
             android:background="@drawable/region_button_northeast"
-            android:text="🌾\nNortheast\nอีสาน"
+            app:backgroundTint="@null"
+            android:text="🌾
+Northeast
+อีสาน"
             android:textColor="@android:color/white"
             android:gravity="center"
-            android:elevation="8dp"
-            app:backgroundTint="@drawable/region_button_northeast"/>
+            android:elevation="8dp" />
 
         <!-- Central Region -->
         <Button
@@ -104,11 +110,13 @@
             android:layout_columnWeight="1"
             android:layout_margin="8dp"
             android:background="@drawable/region_button_central"
-            android:text="🏛️\nCentral\nภาคกลาง"
+            app:backgroundTint="@null"
+            android:text="🏛️
+Central
+ภาคกลาง"
             android:textColor="@android:color/white"
             android:gravity="center"
-            android:elevation="8dp"
-            app:backgroundTint = "@drawable/region_button_central"/>
+            android:elevation="8dp" />
 
     </GridLayout>
 

@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -33,7 +35,6 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
-    buildToolsVersion = "36.0.0"
     buildFeatures {
         viewBinding = true
     }
@@ -60,8 +61,11 @@ dependencies {
     implementation("androidx.cardview:cardview:1.0.0")
     implementation(libs.google.flexbox)
 
-
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    implementation(platform("com.google.firebase:firebase-bom:34.3.0"))
+    implementation("com.google.firebase:firebase-ai")
+    implementation("com.google.firebase:firebase-analytics")
 }
