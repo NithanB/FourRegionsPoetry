@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-
+<!-- REFERENCE ONLY - This XML won't work in this web environment -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -55,62 +55,68 @@
         android:layout_gravity="center">
 
         <!-- North Region -->
-        <androidx.appcompat.widget.AppCompatButton
+        <Button
             android:id="@+id/btnNorth"
             android:layout_width="0dp"
             android:layout_height="128dp"
             android:layout_columnWeight="1"
             android:layout_margin="8dp"
             android:background="@drawable/region_button_north"
-            android:backgroundTint="@null"
-            android:text="🏔️\nNorth\nภาคเหนือ"
+            app:backgroundTint="@null"
+            android:text="🏔️
+North
+ภาคเหนือ"
             android:textColor="@android:color/white"
             android:gravity="center"
             android:elevation="8dp" />
 
         <!-- South Region -->
-        <androidx.appcompat.widget.AppCompatButton
+        <Button
             android:id="@+id/btnSouth"
             android:layout_width="0dp"
             android:layout_height="128dp"
             android:layout_columnWeight="1"
             android:layout_margin="8dp"
             android:background="@drawable/region_button_south"
-            android:backgroundTint="@null"
-            android:text="🏝️\nSouth\nภาคใต้"
+            app:backgroundTint="@null"
+            android:text="🏝️
+South
+ภาคใต้"
             android:textColor="@android:color/white"
             android:gravity="center"
             android:elevation="8dp" />
 
         <!-- Northeast Region -->
-        <androidx.appcompat.widget.AppCompatButton
+        <Button
             android:id="@+id/btnNortheast"
             android:layout_width="0dp"
             android:layout_height="128dp"
             android:layout_columnWeight="1"
             android:layout_margin="8dp"
             android:background="@drawable/region_button_northeast"
-            android:backgroundTint="@null"
-            android:text="🌾\nNortheast\nอีสาน"
+            app:backgroundTint="@null"
+            android:text="🌾
+Northeast
+อีสาน"
             android:textColor="@android:color/white"
             android:gravity="center"
-            android:elevation="8dp"
-            />
+            android:elevation="8dp" />
 
         <!-- Central Region -->
-        <androidx.appcompat.widget.AppCompatButton
+        <Button
             android:id="@+id/btnCentral"
             android:layout_width="0dp"
             android:layout_height="128dp"
             android:layout_columnWeight="1"
             android:layout_margin="8dp"
             android:background="@drawable/region_button_central"
-            android:backgroundTint="@null"
-            android:text="🏛️\nCentral\nภาคกลาง"
+            app:backgroundTint="@null"
+            android:text="🏛️
+Central
+ภาคกลาง"
             android:textColor="@android:color/white"
             android:gravity="center"
-            android:elevation="8dp"
-            />
+            android:elevation="8dp" />
 
     </GridLayout>
 

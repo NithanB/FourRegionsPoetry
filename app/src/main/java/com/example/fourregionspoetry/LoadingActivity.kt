@@ -122,7 +122,7 @@ class LoadingActivity : AppCompatActivity() {
     private fun showError(message: String) {
         // Simple error handling - in production you might want a proper error dialog
         runOnUiThread {
-            tvLoadingText.text = "Error generating poem"
+            tvLoadingText.text = message
             tvLoadingThai.text = "เกิดข้อผิดพลาด"
         }
 
