@@ -1,150 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_background"
-    android:gravity="center"
-    android:orientation="vertical"
-    android:padding="24dp">
-
-    <!-- Rotating Logo -->
-    <RelativeLayout
-        android:layout_width="128dp"
-        android:layout_height="128dp"
-        android:layout_marginBottom="32dp">
-
-        <ImageView
-            android:id="@+id/ivLogo"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/logo_background"
-            android:contentDescription="Loading Logo"
-            android:src="@raw/ic_temple" />
-
-    </RelativeLayout>
-
+    android:fillViewport="true">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/gradient_background"
+        android:gravity="center"
         android:orientation="vertical"
-        android:gravity="center">
+        android:padding="24dp">
 
-        <TextView
-            android:id="@+id/tvLoadingText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Creating Your Poem"
-            android:textSize="24sp"
-            android:textColor="@color/amber_800"
-            android:layout_marginBottom="16dp" />
+        <!-- Rotating Logo -->
+        <RelativeLayout
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:layout_marginBottom="32dp">
 
-        <TextView
-            android:id="@+id/tvLoadingThai"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="กำลังสร้างกลอนของคุณ..."
-            android:textSize="16sp"
-            android:textColor="@color/amber_600"
-            android:layout_marginBottom="24dp" />
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/logo_background"
+                android:contentDescription="Loading Logo"
+                android:src="@raw/ic_temple" />
 
-        <!-- Loading Dots -->
+        </RelativeLayout>
+
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="vertical">
 
-            <View
-                android:id="@+id/dot1"
-                android:layout_width="12dp"
-                android:layout_height="12dp"
-                android:layout_margin="4dp"
-                android:background="@drawable/loading_dot"
-                android:alpha="0.5" />
+            <TextView
+                android:id="@+id/tvLoadingText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Creating Your Poem"
+                android:textColor="@color/amber_800"
+                android:textSize="24sp" />
 
-            <View
-                android:id="@+id/dot2"
-                android:layout_width="12dp"
-                android:layout_height="12dp"
-                android:layout_margin="4dp"
-                android:background="@drawable/loading_dot"
-                android:alpha="0.5" />
+            <TextView
+                android:id="@+id/tvLoadingThai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:text="กำลังสร้างกลอนของคุณ..."
+                android:textColor="@color/amber_600"
+                android:textSize="16sp" />
 
-            <View
-                android:id="@+id/dot3"
-                android:layout_width="12dp"
-                android:layout_height="12dp"
-                android:layout_margin="4dp"
-                android:background="@drawable/loading_dot"
-                android:alpha="0.5" />
+            <!-- Loading Dots -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/dot1"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_margin="4dp"
+                    android:alpha="0.5"
+                    android:background="@drawable/loading_dot" />
+
+                <View
+                    android:id="@+id/dot2"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_margin="4dp"
+                    android:alpha="0.5"
+                    android:background="@drawable/loading_dot" />
+
+                <View
+                    android:id="@+id/dot3"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_margin="4dp"
+                    android:alpha="0.5"
+                    android:background="@drawable/loading_dot" />
+
+            </LinearLayout>
 
         </LinearLayout>
 
+        <!-- Animated Background Elements -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="32dp">
+
+            <View
+                android:id="@+id/particle1"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="50dp"
+                android:alpha="0"
+                android:background="@drawable/particle_background" />
+
+            <View
+                android:id="@+id/particle2"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="100dp"
+                android:alpha="0"
+                android:background="@drawable/particle_background" />
+
+            <View
+                android:id="@+id/particle3"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="150dp"
+                android:alpha="0"
+                android:background="@drawable/particle_background" />
+
+            <View
+                android:id="@+id/particle4"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="200dp"
+                android:alpha="0"
+                android:background="@drawable/particle_background" />
+
+            <View
+                android:id="@+id/particle5"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="250dp"
+                android:alpha="0"
+                android:background="@drawable/particle_background" />
+
+            <View
+                android:id="@+id/particle6"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="300dp"
+                android:alpha="0"
+                android:background="@drawable/particle_background" />
+
+        </RelativeLayout>
+
     </LinearLayout>
-
-    <!-- Animated Background Elements -->
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginTop="32dp">
-
-        <View
-            android:id="@+id/particle1"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
-            android:background="@drawable/particle_background"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="50dp"
-            android:alpha="0" />
-
-        <View
-            android:id="@+id/particle2"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
-            android:background="@drawable/particle_background"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="100dp"
-            android:alpha="0" />
-
-        <View
-            android:id="@+id/particle3"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
-            android:background="@drawable/particle_background"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="150dp"
-            android:alpha="0" />
-
-        <View
-            android:id="@+id/particle4"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
-            android:background="@drawable/particle_background"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="200dp"
-            android:alpha="0" />
-
-        <View
-            android:id="@+id/particle5"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
-            android:background="@drawable/particle_background"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="250dp"
-            android:alpha="0" />
-
-        <View
-            android:id="@+id/particle6"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
-            android:background="@drawable/particle_background"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="300dp"
-            android:alpha="0" />
-
-    </RelativeLayout>
-
-</LinearLayout>
+</ScrollView>

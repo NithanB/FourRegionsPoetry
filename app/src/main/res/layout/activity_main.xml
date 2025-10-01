@@ -1,70 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_background"
-    android:gravity="center"
-    android:orientation="vertical"
-    android:padding="24dp">
+    android:fillViewport="true">
 
-    <!-- Logo Container -->
-    <RelativeLayout
-        android:layout_width="128dp"
-        android:layout_height="128dp"
-        android:layout_marginBottom="32dp">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/logo_background"
-            android:src="@raw/ic_temple"
-            android:contentDescription="Thai Poetry Logo" />
-
-    </RelativeLayout>
-
-    <!-- App Title -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Thai Poetry"
-        android:textSize="32sp"
-        android:textColor="@color/amber_800"
-
-        android:layout_marginBottom="8dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ศิลปะและวัฒนธรรมไทย"
-        android:textSize="20sp"
-        android:textColor="@color/amber_700"
-        android:layout_marginBottom="16dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Discover the beauty of Thai traditional poetry\nfrom all four regions of Thailand"
-        android:textSize="14sp"
-        android:textColor="@color/amber_600"
-        android:gravity="center"
-        android:layout_marginBottom="48dp" />
-
-    <!-- Start Button -->
-    <Button
-        android:id="@+id/btnStart"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:background="@drawable/add_button_background"
-        android:elevation="8dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_background"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="24dp">
 
-        android:text="เริ่มต้น (Start)"
-        android:textColor="@android:color/white"
+        <!-- Logo Container -->
+        <RelativeLayout
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:layout_marginBottom="32dp">
 
-        android:textSize="16sp"
-        app:backgroundTint="@color/orange_500"
-        />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/logo_background"
+                android:src="@raw/ic_temple"
+                android:contentDescription="Thai Poetry Logo" />
 
+        </RelativeLayout>
 
-</LinearLayout>
+        <!-- App Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thai Poetry"
+            android:textSize="32sp"
+            android:textColor="@color/amber_800"
+
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ศิลปะและวัฒนธรรมไทย"
+            android:textSize="20sp"
+            android:textColor="@color/amber_700"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Discover the beauty of Thai traditional poetry
+from all four regions of Thailand"
+            android:textSize="14sp"
+            android:textColor="@color/amber_600"
+            android:gravity="center"
+            android:layout_marginBottom="48dp" />
+
+        <!-- Start Button -->
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/add_button_background"
+            android:elevation="8dp"
+
+            android:text="เริ่มต้น (Start)"
+            android:textColor="@android:color/white"
+
+            android:textSize="16sp"
+            app:backgroundTint="@color/orange_500"
+            />
+
+    </LinearLayout>
+</ScrollView>
