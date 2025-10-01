@@ -4,13 +4,11 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-// 👇 CORRECT IMPORTS for the Firebase AI Logic SDK
 import com.google.firebase.Firebase
 import com.google.firebase.ai.ai
 import com.google.firebase.ai.type.Content
 import com.google.firebase.ai.type.GenerativeBackend
-// import com.google.firebase.ai.type.Part // No longer directly used if only TextPart is needed for requests
-import com.google.firebase.ai.type.TextPart // Correct import for TextPart
+import com.google.firebase.ai.type.TextPart
 import kotlinx.coroutines.launch
 
 // --------------------

@@ -67,8 +67,8 @@
                 android:background="@drawable/region_button_north"
                 app:backgroundTint="@null"
                 android:text="🏔️
-                    North
-                    ภาคเหนือ"
+                North
+                ภาคเหนือ"
                 android:textColor="@android:color/white"
                 android:gravity="center"
                 android:elevation="8dp" />
@@ -122,6 +122,33 @@
                 android:elevation="8dp" />
 
         </GridLayout>
+
+        <!-- Favorites Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Favorite Poems"
+            android:textSize="20sp"
+            android:textColor="@color/amber_800"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="16dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewFavorites"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/textViewNoFavorites"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No favorite poems yet."
+            android:textSize="16sp"
+            android:textColor="@color/amber_700"
+            android:gravity="center"
+            android:visibility="visible"
+            android:layout_marginTop="16dp"/>
 
     </LinearLayout>
 </ScrollView>
