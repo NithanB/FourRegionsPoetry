@@ -142,9 +142,7 @@ class RegionInputActivity : AppCompatActivity() {
     private fun updatePreview() {
         if (keywords.isNotEmpty()) {
             val regionTitle = regionData[region]?.first?.lowercase() ?: region
-            val shortRhyming = if (region == "north") "short rhyming " else ""
-            val preview = "create a ${shortRhyming}thai poem with $regionTitle and ${keywords.joinToString(", ")}"
-            tvPreview.text = "something"
+            tvPreview.text = "Write a short Thai poem about $regionTitle including the words: ${keywords.joinToString(", ")}"
             cardPreview.visibility = View.VISIBLE
         } else {
             cardPreview.visibility = View.GONE

@@ -1,123 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- REFERENCE ONLY - This XML won't work in this web environment -->
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_background"
-    android:orientation="vertical"
-    android:padding="24dp">
+    android:fillViewport="true">
 
-    <!-- Header -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="32dp">
+        android:background="@drawable/gradient_background"
+        android:orientation="vertical"
+        android:padding="24dp">
 
-        <ImageButton
-            android:id="@+id/btnBack"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:src="@drawable/ic_arrow_left"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:contentDescription="Back" />
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_arrow_left"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Back" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Select Region"
+                android:textSize="24sp"
+                android:textColor="@color/amber_800"
+                android:layout_marginStart="16dp" />
+
+        </LinearLayout>
 
         <TextView
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Select Region"
-            android:textSize="24sp"
+            android:text="เลือกภูมิภาค"
+            android:textSize="50sp"
+            android:textColor="@color/amber_700"
+            android:layout_gravity="center"
+            android:layout_marginBottom="32dp" />
+
+        <!-- Region Grid -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="2"
+            android:layout_gravity="center">
+
+            <!-- North Region -->
+            <Button
+                android:id="@+id/btnNorth"
+                android:layout_width="0dp"
+                android:layout_height="128dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:background="@drawable/region_button_north"
+                app:backgroundTint="@null"
+                android:text="🏔️
+                North
+                ภาคเหนือ"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:elevation="8dp" />
+
+            <!-- South Region -->
+            <Button
+                android:id="@+id/btnSouth"
+                android:layout_width="0dp"
+                android:layout_height="128dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:background="@drawable/region_button_south"
+                app:backgroundTint="@null"
+                android:text="🏝️
+                    South
+                    ภาคใต้"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:elevation="8dp" />
+
+            <!-- Northeast Region -->
+            <Button
+                android:id="@+id/btnNortheast"
+                android:layout_width="0dp"
+                android:layout_height="128dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:background="@drawable/region_button_northeast"
+                app:backgroundTint="@null"
+                android:text="🌾
+                Northeast
+                อีสาน"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:elevation="8dp" />
+
+            <!-- Central Region -->
+            <Button
+                android:id="@+id/btnCentral"
+                android:layout_width="0dp"
+                android:layout_height="128dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:background="@drawable/region_button_central"
+                app:backgroundTint="@null"
+                android:text="🏛️
+                Central
+                ภาคกลาง"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:elevation="8dp" />
+
+        </GridLayout>
+
+        <!-- Favorites Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Favorite Poems"
+            android:textSize="20sp"
             android:textColor="@color/amber_800"
-            android:layout_marginStart="16dp" />
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="16dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewFavorites"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/textViewNoFavorites"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No favorite poems yet."
+            android:textSize="16sp"
+            android:textColor="@color/amber_700"
+            android:gravity="center"
+            android:visibility="visible"
+            android:layout_marginTop="16dp"/>
 
     </LinearLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="เลือกภูมิภาค"
-        android:textSize="50sp"
-        android:textColor="@color/amber_700"
-        android:layout_gravity="center"
-        android:layout_marginBottom="32dp" />
-
-    <!-- Region Grid -->
-    <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:columnCount="2"
-        android:rowCount="2"
-        android:layout_gravity="center">
-
-        <!-- North Region -->
-        <Button
-            android:id="@+id/btnNorth"
-            android:layout_width="0dp"
-            android:layout_height="128dp"
-            android:layout_columnWeight="1"
-            android:layout_margin="8dp"
-            android:background="@drawable/region_button_north"
-            app:backgroundTint="@null"
-            android:text="🏔️
-North
-ภาคเหนือ"
-            android:textColor="@android:color/white"
-            android:gravity="center"
-            android:elevation="8dp" />
-
-        <!-- South Region -->
-        <Button
-            android:id="@+id/btnSouth"
-            android:layout_width="0dp"
-            android:layout_height="128dp"
-            android:layout_columnWeight="1"
-            android:layout_margin="8dp"
-            android:background="@drawable/region_button_south"
-            app:backgroundTint="@null"
-            android:text="🏝️
-South
-ภาคใต้"
-            android:textColor="@android:color/white"
-            android:gravity="center"
-            android:elevation="8dp" />
-
-        <!-- Northeast Region -->
-        <Button
-            android:id="@+id/btnNortheast"
-            android:layout_width="0dp"
-            android:layout_height="128dp"
-            android:layout_columnWeight="1"
-            android:layout_margin="8dp"
-            android:background="@drawable/region_button_northeast"
-            app:backgroundTint="@null"
-            android:text="🌾
-Northeast
-อีสาน"
-            android:textColor="@android:color/white"
-            android:gravity="center"
-            android:elevation="8dp" />
-
-        <!-- Central Region -->
-        <Button
-            android:id="@+id/btnCentral"
-            android:layout_width="0dp"
-            android:layout_height="128dp"
-            android:layout_columnWeight="1"
-            android:layout_margin="8dp"
-            android:background="@drawable/region_button_central"
-            app:backgroundTint="@null"
-            android:text="🏛️
-Central
-ภาคกลาง"
-            android:textColor="@android:color/white"
-            android:gravity="center"
-            android:elevation="8dp" />
-
-    </GridLayout>
-
-</LinearLayout>
+</ScrollView>

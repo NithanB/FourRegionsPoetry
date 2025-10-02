@@ -4,10 +4,10 @@
     <selectionStates>
       <SelectionState runConfigName="app">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2025-09-29T07:11:07.224032300Z">
+        <DropdownSelection timestamp="2025-10-01T08:21:54.522930400Z">
           <Target type="DEFAULT_BOOT">
             <handle>
-              <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\HP Elitebook 830 G8\.android\avd\Pixel_9.avd" />
+              <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\Main\.android\avd\Pixel_9.avd" />
             </handle>
           </Target>
         </DropdownSelection>

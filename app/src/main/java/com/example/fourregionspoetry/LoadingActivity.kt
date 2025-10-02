@@ -10,7 +10,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import com.example.fourregionspoetry.GeminiApiService
 import androidx.activity.OnBackPressedCallback
 
 class LoadingActivity : AppCompatActivity() {
@@ -122,8 +121,8 @@ class LoadingActivity : AppCompatActivity() {
     private fun showError(message: String) {
         // Simple error handling - in production you might want a proper error dialog
         runOnUiThread {
-            tvLoadingText.text = message
-            tvLoadingThai.text = "เกิดข้อผิดพลาด"
+            tvLoadingText.text = "Something"
+            tvLoadingThai.text = message
         }
 
         // Go back after showing error
