@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "387873280289",
+    "project_id": "androidfinal-3050f",
+    "storage_bucket": "androidfinal-3050f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:387873280289:android:c21591b88cadedde7f2e60",
+        "android_client_info": {
+          "package_name": "com.example.fourregionspoetry"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMd79HgmzJLRFZ9RjPZoXaGcCqCR-oBng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
